@@ -6,35 +6,96 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+    <TextView
+        android:id="@+id/txtvHttpLink"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="61dp"
+        android:text="Enter a http link to open:"
+        app:layout_constraintBottom_toTopOf="@+id/httpLinkInp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/txtvHttpLink"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Enter a http link to open:" />
+    <EditText
+        android:id="@+id/httpLinkInp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/httpLinkInp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="" />
+    <Button
+        android:id="@+id/btnShwWebPage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:onClick="openWebSite"
+        android:text="Show Website"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/httpLinkInp" />
 
-        <Button
-            android:id="@+id/btnShwWebPage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Show Website"
-            android:onClick="openWebSite"/>
+    <TextView
+        android:id="@+id/txtvPhoneNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="9dp"
+        android:text="Enter a phone number to call | sendSMS:"
+        app:layout_constraintBottom_toTopOf="@+id/phoneNumInp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <EditText
+        android:id="@+id/phoneNumInp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnShwWebPage" />
 
+    <Button
+        android:id="@+id/btnSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="18dp"
+        android:onClick="sendSMS"
+        android:text="Send SMS"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumInp" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="37dp"
+        android:onClick="call"
+        android:text="Call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumInp" />
+
+    <Button
+        android:id="@+id/btnShwContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:onClick="showContactList"
+        android:text="Show Contacts"
+        app:layout_constraintStart_toEndOf="@+id/btnSMS"
+        app:layout_constraintTop_toBottomOf="@+id/btnSMS" />
+
 </android.support.constraint.ConstraintLayout>
