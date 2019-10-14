@@ -17,18 +17,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void openWebSite (View v)
     {
-        // To read data ntered by the user in input field
-        EditText ed = (EditText) findViewById(R.id.httpLinkInp);
-        String url = "http://" + ed.getText().toString();
-
-        // To ask System to open website
-
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
-
-        // OR  Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-
-        startActivity(i);
 
     }
+
+    public void sendSMS (View v)
+    {
+
+    }
+
+    public void call (View v)
+    {
+        // HW
+    }
+
+    public void showContactList (View v)
+    {
+
+    }
+
 }
